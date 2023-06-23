@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 public class RandomizeLine
 {
-    private readonly Dictionary<int, int> lineRandomValue = new Dictionary<int, int>();
+    private readonly Dictionary<int, int> _lineRandomValue = new Dictionary<int, int>();
 
     private void calculateLineRandomValue(int line)
     {
-        if (!lineRandomValue.ContainsKey(line))
+        if (!_lineRandomValue.ContainsKey(line))
         {
-            lineRandomValue[line] = new Random().Next(0, Int32.MaxValue);
+            _lineRandomValue[line] = new Random().Next(0, Int32.MaxValue);
         }
     }
 
@@ -21,13 +21,13 @@ public class RandomizeLine
     public X getLineRandomElement<X>(List<X> elems, int line)
     {
         calculateLineRandomValue(line);
-        return elems[lineRandomValue[line] % elems.Count];
+        return elems[_lineRandomValue[line] % elems.Count];
     }
 
     public double getLineRandomNumber(double lowerBound, double upperBound, int line)
     {
         calculateLineRandomValue(line);
-        var random = new Random(this.lineRandomValue[line]);
+        var random = new Random(this._lineRandomValue[line]);
         if (lowerBound > upperBound)
         {
             return NextDouble(random, upperBound, lowerBound);
