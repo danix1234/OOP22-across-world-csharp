@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class RandomizeLine
 {
     private readonly Dictionary<int, int> _lineRandomValue = new Dictionary<int, int>();
