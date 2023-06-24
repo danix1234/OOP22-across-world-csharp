@@ -1,4 +1,4 @@
-public interface Launcher
+public interface ILauncher
 {
     SceneType GetSceneType();
 
