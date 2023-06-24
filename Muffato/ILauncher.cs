@@ -8,7 +8,7 @@ public interface Launcher
 
     void SaveAndCloseWindow();
 
-    Scene GetScene();
+    IScene GetScene();
 
     void ShowWindow();
 
@@ -24,34 +24,34 @@ public interface Launcher
 
     void SetDifficulty(Difficulty difficulty);
 
-    Player GetPlayer();
+    IPlayer GetPlayer();
 
-    List<Obstacle> GetObstacles();
+    List<IObstacle> GetObstacles();
 
-    List<Collectable> GetCollectables();
+    List<ICollectable> GetCollectables();
 
-    List<BackgroundCell> GetBackgroundCells();
+    List<IBackgroundCell> GetBackgroundCells();
 
-    Loader GetLoader();
+    ILoader GetLoader();
 
     void LoadMap();
 
-    GameStat GetGameStat();
+    IGameStat GetGameStat();
 
     void MovePlayerIfPossible(int x, int y);
 
     void MoveDynamicObstacles();
 
-    void RemoveCollectable(Collectable collectable);
+    void RemoveCollectable(ICollectable collectable);
 
     void Start();
 
-    InputHandler GetInputHandler(SceneType sceneType);
+    IInputHandler GetInputHandler(SceneType sceneType);
 
     void StartEngine();
 
-    CheckCollision GetCheckCollision();
+    ICheckCollision GetCheckCollision();
 
-    HandlePowerup GetHandlePowerup();
+    IHandlePowerup GetHandlePowerup();
 
 }
