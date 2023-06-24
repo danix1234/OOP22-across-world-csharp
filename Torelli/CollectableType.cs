@@ -2,11 +2,11 @@ using System;
 
 public class CollectableType
 {
-    private Boolean coin;
-    private Boolean powerUp;
+    private bool coin;
+    private bool powerUp;
     private int value;
 
-    public CollectableType(Boolean coin, Boolean powerUp, int value)
+    public CollectableType(bool coin, bool powerUp, int value)
     {
         this.coin=coin;
         this.powerUp=powerUp;

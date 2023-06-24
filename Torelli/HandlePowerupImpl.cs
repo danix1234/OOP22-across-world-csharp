@@ -1,6 +1,6 @@
 using System.Timers;
 
-public class HandlePowerupImpl : HandlePowerup{
+public class HandlePowerupImpl : IHandlePowerup{
     private const int POWERUP_DURATION = 10_000;
     private List<CollectableType> powerupTypeList = new List<CollectableType>();
     private long counter = long.MinValue;
