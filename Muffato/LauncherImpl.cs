@@ -13,8 +13,12 @@ public class LauncherImpl : ILauncher
     public static readonly bool REMAIN_PLAYER_ON_TRUNK = true;
     public static readonly bool ENABLE_HITBOX = false;
     private static readonly int TRANSLATION_TO_SX = TRANSLATE_PIXELS ? -CELL_DIM : 0;
-    private SceneType _sceneType;
-    private Difficulty _difficulty;
+    private SceneType _sceneType = SceneType.MENU;
+    private Difficulty _difficulty = Difficulty.EASY;
+
+    private LauncherImpl()
+    {
+    }
 
     SceneType ILauncher.GetSceneType() => _sceneType;
 
