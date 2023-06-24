@@ -2,11 +2,15 @@ using System;
 
 public class CollectableType
 {
+    private static CollectableType COIN = new CollectableType(true, false, 1);
+    private static CollectableType POWERUP_COIN_MULTIPLIER = new CollectableType(false, true, null);
+    private static CollectableType POWERUP_COIN_MAGNET = new CollectableType(false, true, null);
+    private static CollectableType POWERUP_IMMORTALITY = new CollectableType(false, true, null);
     private bool coin;
     private bool powerUp;
-    private int value;
+    private int? value;
 
-    public CollectableType(bool coin, bool powerUp, int value)
+    public CollectableType(bool coin, bool powerUp, int? value)
     {
         this.coin=coin;
         this.powerUp=powerUp;
@@ -21,7 +25,7 @@ public class CollectableType
     {
         return this.powerUp;
     }
-    private int coinValue()
+    private int? coinValue()
     {
         return this.value;
     }
