@@ -55,3 +55,39 @@ public interface ILauncher
     IHandlePowerup GetHandlePowerup();
 
 }
+
+public interface ICheckCollision
+{
+}
+
+public interface IInputHandler
+{
+}
+
+public interface IGameStat
+{
+}
+
+public interface ILoader
+{
+}
+
+public interface IBackgroundCell
+{
+}
+
+public interface ICollectable
+{
+}
+
+public interface IObstacle
+{
+}
+
+public interface IPlayer
+{
+}
+
+public interface IScene
+{
+}
